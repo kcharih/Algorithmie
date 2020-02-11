@@ -1,0 +1,38 @@
+###EXERCICE 5###
+chaine SUFFIXE_MAIL <-- "@crm.com"
+caractere POINT <--  '.'
+chaine prenom <-- ""
+chaine nom <-- ""
+chaine mail <-- ""
+
+DEBUT
+	écrire "Entrer votre prénom : "
+	lire prenom
+	écrire "Entrer votre nom : "
+	lire nom
+
+	Si prenom = "" OU nom = "" Alors
+		écrire "Les informations saisies ne sont pas complètes" 
+	Sinon
+		mail <-- prenom + POINT + nom + SUFFIXE_MAIL
+		écrire "Votre adresse mail sera : ", mail
+	Fin Si
+FIN
+
+
+###EXERCICE 2###
+reel TAUX <-- 1.11
+reel montantEuro <-- 0.0
+reel montantDollar <-- 0.0
+
+DEBUT
+	écrire "Entrer un montant en euro"
+	lire montantEuro
+	
+	Si montantEuro < 0 Alors
+		écrire "Montant invalide, veuillez effectuer une nouvelle saisie" 
+	Sinon
+		montantDollar <-- montantEuro * TAUX
+		écrire "Le montant en dollar est de : ", montantDollar
+	Fin Si
+FIN	
